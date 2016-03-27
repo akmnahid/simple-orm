@@ -17,6 +17,9 @@ class Expression
     public $column=null;
     private $quote = false;
 
+    /**
+     * constructor
+     */
     public function __construct($value,$column=null,$quote=false){
         $this->value = $value;
         $this->column = $column;

@@ -243,10 +243,7 @@ abstract class DatabaseObject implements DbInterface
         else {
             $sql = "Update `" . static::getTableName() . "` SET " . implode(',', $sql) . " WHERE `" . static::getPrimaryKey() . "`=" . (int)$this->{static::getPrimaryKey()};
         }
-        // }
         try{
-            //echo $sql.'<br>';
-
             $stmt = static::getDbInstance()->prepare($sql);
 
             foreach(static::getColumns() as $column){
@@ -255,10 +252,7 @@ abstract class DatabaseObject implements DbInterface
                 }
                 $stmt->bindParam(":".$column,$this->{$column});
             }
-            //echo "\n\n";
-            //$stmt->debugDumpParams();
-            //echo "\n\n";
-            //echo $stmt->queryString;
+
             $stmt->execute();
 
 
