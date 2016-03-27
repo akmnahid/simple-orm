@@ -12,15 +12,19 @@ Simple ORM is inspired by Yii2 Active Record
 
 
 *******************
+###################
 Server Requirements
-*******************
+###################
+
 
 PHP version 5.6.3 or newer is recommended.
 
 
 *******
+###################
 License
-*******
+###################
+
 
 GNU GPL
 
